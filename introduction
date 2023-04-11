@@ -1,0 +1,2373 @@
+hello all my name is krishnaika and
+
+welcome to my YouTube channel so guys I
+
+hope you have learned a lot from my
+
+end-to-end Project Playlist machine
+
+learning project playlist with
+
+deployment till now I have actually
+
+created 10 tutorials and I could see
+
+many people are creating amazing
+
+projects by using cicd pipelines in our
+
+previous video we saw two different
+
+deployment techniques one was with the
+
+help of AWS Beanstalk and the other one
+
+was in the Azure Cloud but now in this
+
+particular video I will be focusing on
+
+uh you know creating a production grade
+
+deployment technique using AWS where I
+
+will specifically use ECR and ec2
+
+instance I will talk about what exactly
+
+is ECR and ec2 instance but I had
+
+already announced guys that before
+
+attending this lesson right I had
+
+actually created a complete one hour 20
+
+minutes video on Dockers so if you know
+
+this trust me this will be super easy
+
+for you to understand this particular
+
+video at the end of the day please make
+
+sure that you revise this Docker I had
+
+also announced that in my community post
+
+Because unless and until you don't
+
+understand with respect to Docker you
+
+will not be able to understand this
+
+deployment right and this was the entire
+
+playlist please go ahead share with all
+
+your friends and see to it okay now
+
+let's go ahead and do this particular
+
+deployment uh and this deployment can
+
+for you can basically also use it for
+
+both machine learning and deep learning
+
+project it is up to you okay
+
+so let's go ahead and let's quickly do
+
+this uh first of all I have my project
+
+over here the entire project created now
+
+additionally what I need to do is that I
+
+need to create this Docker file okay so
+
+Docker file I need to create over here
+
+and this Docker file will play a very
+
+important role why Docker is required
+
+because uh like with the help of Docker
+
+you'll be able to correct create
+
+containers with irrespective of the OS
+
+that is specifically being used in the
+
+server you know and uh you know I've
+
+actually created a detailed video that
+
+only I said right I have created a
+
+detailed video about Dockers over here
+
+made you understand everything if you
+
+are able to understand till here trust
+
+me it will be very easy so in this video
+
+over here what we are going to do first
+
+of all we are going to include this
+
+Docker file my entire project was built
+
+in 3.8 so I'm going to just mention 3.8
+
+over here but step by step if you really
+
+need to understand what exactly we are
+
+doing I'm I'm basically saying that take
+
+a base image of python 3.8 slim Buster
+
+so whatever happen is that from the
+
+docker Hub it will bring up this python
+
+3.8 version of Linux machine I'll not
+
+say Linux machine Linux base image so
+
+that it can be taken and can be done
+
+with respect to the deployment it will
+
+not take machine okay it will be taking
+
+a base image of a Linux environment and
+
+uh we are creating a working directory
+
+called as app okay then uh the next step
+
+is basically copying this entire project
+
+into this app folder okay the entire
+
+project into this app folder over here
+
+and then the next step is a run command
+
+where we are updating all the packages
+
+after probably uh doing before doing the
+
+deployment in that specific server it
+
+can be a Linux machine okay and we will
+
+definitely use a Ubuntu machine over
+
+there and then we will go ahead and do
+
+the installment of the entire
+
+requirement.txt so once that install
+
+emission takes place this is the command
+
+that is used to run the file that is
+
+app.py python3 app.py just specifying
+
+that we are working in Python 3 version
+
+3.8 version and then the app.py is
+
+basically my file name which it will be
+
+running it is the same project that we
+
+have actually done student performance
+
+indicator right that same project see
+
+this guys if you probably see over here
+
+this is my model training this is my
+
+student performance indicator everything
+
+is same now additionally what I am doing
+
+in this video is that I am going ahead
+
+and creating a Docker file okay now with
+
+respect to this particular Docker file
+
+once we do it we just need to check
+
+whether we are able to build this Docker
+
+file or not okay and again in order to
+
+show you like how the build basically
+
+happens and all I will just go ahead and
+
+delete this and probably create a
+
+command prompt okay so if you probably
+
+see over here right Docker images if I
+
+go just go and see Docker images so I
+
+think the docker is not open so for this
+
+you required a Docker desktop now what
+
+exactly Docker is I've created a
+
+dedicated video in that particular video
+
+itself the one hour video we need to
+
+start this Docker and then only we'll be
+
+able to create the docker image because
+
+I just need to check whether my Docker
+
+image is being able to create or not
+
+okay so that all things will try to see
+
+see at the end of the day we will be
+
+seeing you can see this video only like
+
+how to build a Docker how to install the
+
+docker how to create a Docker image
+
+everything you know everything is
+
+basically mentioned over here Docker
+
+image to push Docker image to Docker Hub
+
+you know build how to build it
+
+everything is done over here in this
+
+particular video guys and uh you can
+
+probably see that with respect to
+
+command with respect to everything we
+
+have executed over here and I have
+
+explained in a detailed manner so my
+
+suggestion would be that please go
+
+through this it is super super important
+
+if you know this how to do it trust me
+
+it will be very much easy for you know
+
+able to understand a Docker okay so ah
+
+like if I really want to build a Docker
+
+I can probably build a Docker by using
+
+some commands which I will show you
+
+right now but you just see this video
+
+okay
+
+this video is very very much important
+
+with respect to the implementation see
+
+in this I am pushing this particular uh
+
+images to the docker Hub itself right so
+
+all those things are basically happening
+
+and it has been explained in above
+
+perfect way okay
+
+now what I'm going to do over here is
+
+that so here is my Docker desktop okay
+
+it has been enabled if I probably see in
+
+the images you can see over here I have
+
+created this Krishna x06 performance uh
+
+student performance already right and
+
+this is the docker that we have
+
+specifically created now if I go and see
+
+if I just clear the screen I know guys
+
+little this is little bit difficult but
+
+you really need to see this okay now
+
+here if I probably go ahead and Docker
+
+images
+
+so here you'll be able to see I have
+
+already created this particular images
+
+right so this is building correctly
+
+everything is happening correctly I
+
+don't want to show you the steps
+
+otherwise it will just be a repeated
+
+step so that is the reason I'm telling
+
+you to go through this particular video
+
+okay this video will be put up in the
+
+pinned comment okay now what we are
+
+going to do after we create this the
+
+validating is happening the building is
+
+happening with respect to my Docker now
+
+the next step what I will do I will push
+
+this entire content into the GitHub and
+
+then once I put into the GitHub then we
+
+will go ahead with the deployment so
+
+here we probably see this I've created a
+
+new repository called the AWS cicd
+
+project and here you will be able to see
+
+my entire deployment the commit that I
+
+have actually done with respect to the
+
+code okay
+
+now before this commit you really also
+
+need to understand one workflow that we
+
+have specifically created so here is the
+
+main.yaml file now please observe this
+
+workflow because of this workflow only
+
+the entire deployment will happen and
+
+this workflow has both CI CD pipeline
+
+integrated okay observe this workflow
+
+the name of this particular workflow is
+
+workflow only whenever any push is
+
+happening on the main branch right the
+
+readme.md file is ignored remaining all
+
+will be pushed into our deployment first
+
+of all the job that is going to happen
+
+we will divide this first is integration
+
+then we push it into the ECR image and
+
+then we have continuous deployment this
+
+three steps are important right with
+
+respect to our deployment when we say
+
+integration in integration this is
+
+nothing but continuous integration in
+
+this integration what we specifically do
+
+it is saying that you need to run on the
+
+Ubuntu latest machine and here it is
+
+will check out the code and it I've just
+
+printed some linting repository like Eco
+
+code is there some printing is happening
+
+so what all things you can basically do
+
+in this integration section you can run
+
+all the unit test cases to just see that
+
+if everything is running properly or not
+
+right so here we have just printed some
+
+Eco command this Eco command is
+
+basically used in Linux machine but
+
+along with this if you really want to
+
+run any simple operation of testing all
+
+the unit test cases you can probably do
+
+this okay I will later on in my project
+
+I will create some unit test cases and
+
+we will try to run it in the integration
+
+environment like in the continuous
+
+integration section okay so this is my
+
+first task with respect to the job okay
+
+so integration after integration what
+
+will happen after continuous integration
+
+we need to build build and push ECR
+
+image now what is ECR image Now
+
+understand one thing guys when we create
+
+a Docker okay by default Docker when we
+
+take that Docker image and push it into
+
+the docker hub then from that Docker Hub
+
+everybody will be publicly able to
+
+access right this particular Docker file
+
+now if I probably show you my Docker Hub
+
+okay
+
+I will log in and show you see I had
+
+actually created one Docker Hub Docker
+
+Hub is just like you have all the docker
+
+images whoever wants to put put it over
+
+here right so based on that like let's
+
+say if you have created a Docker image
+
+you want people to use it you can put it
+
+into a Docker Hub and this will be
+
+publicly available so similarly here you
+
+can see that I've put this student
+
+performance app over here in the docker
+
+Hub so that people can be able to access
+
+it but when you are working for the
+
+companies right when you're working for
+
+the companies this particular app this
+
+particular Docker image will be private
+
+okay and in order to put the private
+
+Docker image where do you put in AWS in
+
+AWS you specifically put that in the ECR
+
+repository right so AWS ECR if I
+
+probably just go and search for AWS ECR
+
+see what exactly is AWS CCR AWS ECR is
+
+for build deploy and manages uh on AWS
+
+if I see ECR see it is fully managed
+
+Docker container to store manage and
+
+deploy images
+
+so whatever image is basically created
+
+over here I will put a in the ECR
+
+repository and from there the deployment
+
+will be done to the ec2 instance this is
+
+how all the entire steps will go ahead
+
+you know so ECR is basically used to
+
+store private Docker images so those
+
+Docker images will not be publicly
+
+available you can still read about this
+
+more over here push container images to
+
+ECR without installing or scaling
+
+infrastructure and pull images using any
+
+management tool from this ECR we can
+
+probably do the deployment in various
+
+instances like you can go ahead and do
+
+the deployment in ec2 instance and all
+
+and all and all okay it says it has more
+
+functionality see access and distribute
+
+your image faster reduce download times
+
+and improve ability using a scalable
+
+durable architecture when I was in my
+
+previous working in my previous project
+
+there also in in Panasonic I was
+
+specifically using this AWS ECR and
+
+awcc2 instance for doing any kind of
+
+deployment okay
+
+now let's go ahead and let's see uh what
+
+is the next step after pushing it into
+
+the easier in the ECR again first of all
+
+you need to understand this command it
+
+needs integration that basically means
+
+unless and until integration part is not
+
+successful we will not go ahead and push
+
+push the entire Docker image into the
+
+NCR repository and this is the part of
+
+continuous delivery
+
+it will also run on Ubuntu latest it
+
+will check out the code from the GitHub
+
+it will install all the necessary
+
+libraries that is required to update the
+
+packages then it will configure the AWS
+
+credentials whatever credential is now
+
+you may be thinking Krish how do we come
+
+to this particular credential I will
+
+discuss about it don't worry okay
+
+everything will be discussed with
+
+respect to the credentials everything as
+
+such okay then I have this access key
+
+AWS access key ID AWS secret access key
+
+this all are basically coming from the
+
+uh credentials only from the specific IM
+
+user okay I will also show you then
+
+we'll login into the Amazon ECR and when
+
+after logging it we will build tag and
+
+push image to the ECR right and for this
+
+again you will be requiring some output
+
+registry and ECR repository name after
+
+that you can probably go to the
+
+continuous deployment section here you
+
+can see that it will build and push the
+
+ECR image now this ECR image will
+
+probably run as a self-hosted app Runner
+
+I will show you that also then the my
+
+steps are again same like checkout then
+
+again AWS credentials it will log into
+
+the ECR and then it will use this
+
+particular login ID and then it will
+
+pull the latest image and it will do the
+
+deployment in the ec2 instance see run
+
+Docker image to server users and by
+
+using this command we will try to run
+
+this particular Docker file uh Docker
+
+image and here you will be also able to
+
+see this particular uh app name okay now
+
+you may be thinking did I create this no
+
+it was already present in the
+
+marketplace of GitHub actions which will
+
+give you an option how to deploy from
+
+your GitHub to ECR to AWS right how do
+
+you get that just go to your GitHub okay
+
+go to GitHub actions okay and over here
+
+you have this workflow right so if you
+
+go ahead and click on new for flow this
+
+is where you get an option see deploy to
+
+Amazon ECS deploy container to Amazon
+
+ECS service powered by AWS fragrat or
+
+Amazon ec2 right you can probably click
+
+this and automatically you will be
+
+getting the entire code see if I go
+
+ahead and configure it you'll be getting
+
+this entire ml file see this this is my
+
+entire ml file all the steps whatever it
+
+is doing everything will be repeated
+
+over here
+
+right same thing I did not do anything I
+
+just copied the same thing and pasted it
+
+over there right
+
+now after making all these changes what
+
+we are going to do
+
+and guys let me know if you want a
+
+detailed video on GitHub actions to
+
+explain each and every each and every
+
+instruction over here I will be happy to
+
+create a video on that okay so now what
+
+we are going to do we are going to just
+
+commit this entire code I have already
+
+committed to this code so if you see in
+
+this particular repository I'll be able
+
+to see the code okay so this is my
+
+entire code with my GitHub workflow now
+
+let's go step by step okay now first
+
+step I will just open my Notepad so
+
+Docker build has been checked
+
+checked and then second step is that
+
+what did we do in the second step with
+
+respect to this if you remember in the
+
+second step we set up our GitHub
+
+workflow
+
+okay again understand from GitHub to ECR
+
+repository then to ec2 instance okay so
+
+this is my second step
+
+my third step if I probably talk about
+
+in the third step what we are going to
+
+do now I'm going to create my IM user in
+
+AWS right so here I'm just going to go
+
+ahead and create IM user so first of all
+
+I will require IM user so I will just go
+
+and see so I will go and click on users
+
+this is my company's uh AWS account so I
+
+have the entire control so I can change
+
+it whenever I want okay so I have
+
+already created this krishnaik I'm user
+
+okay if I want to delete it I can also
+
+delete it and probably I will try to
+
+create it again okay so I'll go ahead
+
+and write krishnaik okay now why do we
+
+require this IAM right it is nothing but
+
+identity and access management this is
+
+super important to understand what we
+
+can basically do with the I am over here
+
+now let's say that
+
+I am a admin right and I want some
+
+people to work in my team right and my
+
+entire companies all the deployment
+
+usually happen in AWS so being admin I
+
+cannot just give the entire admin access
+
+to everyone right so what we do is that
+
+for the people who are working in some
+
+specific cloud services like in AWS I'm
+
+probably going to use ECR and I'm going
+
+to probably use uh ec2 instance so I
+
+will try to only give the services for
+
+this too right so the users will be able
+
+to get that permission and they'll be
+
+able to work over here right so what I'm
+
+actually going to do I'll just go ahead
+
+and add the user right now I'm the admin
+
+and I will say Krish okay so krishnaik I
+
+am giving okay and over here you will be
+
+able to see I will go and click on next
+
+okay now in which team it basically
+
+belongs which user groups it basically
+
+belongs okay all all the things will be
+
+there or copy all group membership
+
+attached members manage policies and in
+
+line thing whether you want that or at
+
+ad group to users or at policies
+
+directly so I will search for Amazon
+
+Amazon ECR
+
+let's see whether I get anything as such
+
+nothing is there okay I will clear the
+
+filter now let me go ahead and search
+
+Amazon ec2
+
+container okay I think in this we will
+
+be able to find something so here you
+
+can see Amazon ec2 container registry
+
+full access so please go ahead and
+
+select this okay
+
+and attach this okay
+
+so this one I am going to attach the
+
+next thing that I am probably going to
+
+attach is uh Amazon
+
+ec2
+
+Amazon ec2 full access so here you will
+
+be able to see container registry I
+
+require because I am going to do my
+
+deploy I'm going to push my Docker image
+
+over here and AWS ec2 full access okay
+
+so this two I will go ahead and clear
+
+the filters okay so this two has been
+
+added I will go and click on next and
+
+now here is my permission summary see I
+
+have all these things I have permissions
+
+that has been given over here okay with
+
+respect to this particular permissions I
+
+have and I can create this particular
+
+username okay now I will go ahead and
+
+create the user after creating the user
+
+you'll be able to see krishnaik over
+
+here okay and uh if you probably see one
+
+more things there will be something
+
+called as security credentials and this
+
+security credential will give you this
+
+sign-in link everything as such but
+
+there will be one very important uh
+
+thing that you will be able to get okay
+
+over here one is called as credentials
+
+like what kind of credential you want
+
+with respect to the access key right so
+
+I will go ahead and create the access
+
+key I will write command line interface
+
+okay because I am going to use this with
+
+respect to the command line interface
+
+only and I will go and click on next no
+
+need to write any tag value I will go
+
+ahead and create the access key now this
+
+access key will be super super important
+
+because this access key only I am going
+
+to use it okay so I'm going to download
+
+this over here and keep this CSV file
+
+handy so that whenever the access key is
+
+required I'll try to put this okay so
+
+this step is done okay I will go and
+
+click on done so my user is already
+
+created I am user krishnaire okay
+
+now coming to the next step now in The
+
+Next Step uh what all things we really
+
+need to do okay I will go and search for
+
+ECR okay
+
+see elastic container registry now I'll
+
+go to the elastic container registry
+
+and I will create a new repository so
+
+create a new repository like this
+
+now the visibility setting will be
+
+private here I can probably write
+
+anything that I want so in this case I
+
+will go ahead and write
+
+student performance
+
+student performance so this will
+
+basically be my uh
+
+ECR URL name okay and then I do not
+
+think so we need to put anything all the
+
+way over here but it will be private
+
+okay it should not be public so just for
+
+the private deployment so I will go and
+
+create it
+
+and let's go ahead and create this so
+
+this is my deployment done let's see so
+
+this is my student performance I will
+
+copy this URL over here this URL be
+
+super important and I'll paste it over
+
+here okay I will paste it over here okay
+
+now this URL will also be used somewhere
+
+which I will be telling you in some time
+
+now once the ECR repository is created
+
+now we will go to the ec2 instance and I
+
+will create my virtual Cloud virtual
+
+server in the cloud
+
+and we'll try to integrate this with the
+
+ECR Also let's see how we will be doing
+
+okay so here first of all I will go and
+
+click on launch instance so we'll go and
+
+create one launch instance let's go over
+
+here and select my web server name so my
+
+web server over here can be student
+
+performance I can just write student
+
+performance
+
+okay
+
+student performance
+
+so next step
+
+I will select out of all these things we
+
+will go ahead and select Ubuntu okay and
+
+in Ubuntu it will be 64. now which Tire
+
+can we use okay so at least my
+
+application is little bit so I will just
+
+go ahead and use this T2 medium okay
+
+there will be some charges so once you
+
+probably test it please make sure that
+
+you delete this okay do you require a
+
+keeper login so here I will be using the
+
+previous key pair whatever is present
+
+okay I'll say sample ec2
+
+then create a security group nothing is
+
+required I will just stick this allow
+
+https traffic and allow HTTP traffic
+
+and after we do this this is a configure
+
+storage I can also increase it based on
+
+my things okay and remaining all are
+
+fine I guess uh and then we will try to
+
+launch this instance okay so I will go
+
+ahead and create or click on this launch
+
+the instance okay so it will create all
+
+these groups and it will uh probably
+
+launch everything now if I go and click
+
+on the instances uh so this is my
+
+student performance instance
+
+okay it is still in the pending stage it
+
+is going to take some amount of time so
+
+once it is done once it is completed we
+
+just need to reload this and then I will
+
+talk about like what has to be done with
+
+respect to the next step okay so yes it
+
+is running I will go ahead and click on
+
+this instance ID now here on the top you
+
+will be able to see something called as
+
+connect to instance okay so connect to
+
+instance we will go ahead and do it okay
+
+now it will probably ask you to easy to
+
+connect username is Ubuntu you can also
+
+connect through session manager SSH
+
+client ec2 serial console right so guys
+
+now to connect to the ec2 instance I
+
+will just go ahead and click on connect
+
+over here
+
+now once we do this it will get
+
+connected and uh
+
+command prompt will get displayed in
+
+front of me and here I need to do the
+
+setup
+
+and just like I've got my uh server
+
+server in front of me with respect to
+
+this particular command prompt I can
+
+probably do anything that I want like
+
+installation and all so I will clear the
+
+screen first of all okay now it is very
+
+much important guys whenever you first
+
+of all create a ec2 instance you also
+
+need to install some packages for
+
+Dockers okay and before that some
+
+packages also we need to install over
+
+here I'll show you so here I will give
+
+all these packages in the in the in in
+
+the GitHub repository only what all
+
+things you need to do for the docker
+
+setup first of all I will go ahead and
+
+execute sudo app get please make sure
+
+that you go ahead and Google it okay
+
+then you will be able to understand
+
+everything so with the help of sudo app
+
+update what will happen is that your
+
+entire packages will be installed and it
+
+will be indexed properly okay so once I
+
+do this it will probably take some time
+
+based on the time it will happen Okay so
+
+done this is done then the next thing is
+
+that we will go ahead and also do
+
+apt-get upgrade so just right click and
+
+paste it over here and just press enter
+
+so this is also done over here I will go
+
+ahead and click on yes and there are
+
+some four to five commands nothing no
+
+logic as such no such mathematics as
+
+such as all we are just setting up our
+
+Linux server that's it okay
+
+now this is done the next step over here
+
+is that this is super super important
+
+what we are doing is that we are trying
+
+to install all the necessary packages
+
+that is required specifically with
+
+respect to a Docker in the Linux machine
+
+so there for that also three different
+
+commands are there first is this one I
+
+have executed it and then we will go and
+
+write sudo sh get docker.sh
+
+just to make sure that all the admin
+
+access is provided with respect to this
+
+so here the execution is basically
+
+happening all the necessary things will
+
+get uploaded okay no need to think so
+
+much if you find difficulties with
+
+respect to any command just go and
+
+Google search it okay so yes this will
+
+be done in some time let's see how much
+
+time and then I will go and just make
+
+sure that I've let sudo user mode so
+
+that I don't have to use sudo at every
+
+point of time okay so this will probably
+
+take some time let's see how much time
+
+it will take
+
+done I will paste it over here okay
+
+and done right so sudo mode is done now
+
+user mode so that I don't have to use
+
+sudo pseudo sudo and I'll create a new
+
+group called as docker
+
+okay and just paste it okay now this is
+
+almost done everything is basically
+
+completed with respect to this uh
+
+now the most important thing that we
+
+really need to do is that see whenever
+
+we commit in the GitHub repository right
+
+automatically that deployment should
+
+happen in the ec2 instance okay so just
+
+in order to check whether Docker is
+
+running or not I'll just go and click on
+
+Docker just write the command Docker and
+
+I can see everything over here right
+
+this is perfect see our main name is
+
+sent from the GitHub ECR repository my
+
+Docker image will go and from that
+
+Docker image it will get installed in
+
+this ec2 instance only that much is the
+
+entire thing that is required okay
+
+now over here what we are going to do
+
+again
+
+please be patient with respect to this
+
+understand step by step commands and all
+
+you'll be able to understand it now in
+
+this GitHub right over here if I go to
+
+settings
+
+in the setting you'll have something
+
+called as action and here you'll be
+
+having the runners now you need to
+
+understand what is the main importance
+
+of the specific Runner okay
+
+this Runner is not a simple thing right
+
+whenever you do any kind of code commit
+
+inside this automatically this Runner
+
+should be able to get trigger and do the
+
+deployment process okay so what we are
+
+going to do we are just going to create
+
+the new uh runner over here I will go
+
+and select Linux now once I do this all
+
+I will be doing is that I just need to
+
+execute this line of code over there
+
+okay and automatically my Runner will
+
+start getting created okay so now see
+
+this okay I will go step by step okay
+
+I'll go self step by step completely
+
+first of all in I need to execute this
+
+command okay where I will be executing
+
+again in my ec2 instance so yeah I will
+
+go and paste it away first of all let me
+
+clear the screen all the command will be
+
+shown to you guys don't worry okay I
+
+will write it in the GitHub repository
+
+so that you can go step by step so I
+
+will paste this the first command where
+
+we'll be creating this action Runner
+
+then the next command what is the next
+
+command over here I will go and probably
+
+download the latest one package okay and
+
+this is how you have to do even in
+
+production we do this specific thing so
+
+it has downloaded the latest uh uh it
+
+has downloaded the latest Runner package
+
+and then we will go ahead and probably
+
+run this for this Linux I don't know for
+
+what purpose it is used but again it is
+
+basically used for the okay I think we
+
+have run this right uh yeah if I see
+
+over here yeah same thing we have runs
+
+on the base uh we have run for the
+
+packages to get the latest packages over
+
+there okay then coming to the next thing
+
+we need to validate the hash so I will
+
+go ahead and paste it again
+
+and just execute it
+
+done the execution is done over here
+
+with respect to this and then when we go
+
+to the next step in the next step again
+
+we have something like this
+
+so Eco validate the hash and then now we
+
+are going to extract the runner okay
+
+so step by step whatever is written over
+
+there we are just going to do that okay
+
+so this is also done okay then again I'm
+
+going to go over here then we are going
+
+to configure this I will go and copy and
+
+paste this
+
+okay
+
+well uh now you can see the self-hosted
+
+runner registration is coming okay so
+
+guys over here you can see that it is
+
+asking the enter the name of the runner
+
+group to add this Runner to right now I
+
+don't want any Runner group so I will
+
+just press enter whatever will be the
+
+default it will be taken but here please
+
+make sure that you give the name called
+
+as self hosted for your app Runner name
+
+okay again understand what is the main
+
+name of the app Runner any changes that
+
+come in the GitHub action GitHub it will
+
+automatically push the deployment so
+
+here what I'm actually going to do I'm
+
+just going to write self hosted once you
+
+write over here and once you press enter
+
+then this will be the name of the Run
+
+okay Enter additional labels any labels
+
+you specifically want so I probably
+
+don't want anything so we will go ahead
+
+and press enter to skip so Runner has
+
+been successfully added enter the name
+
+of the work folder I don't have anything
+
+as such work folder I don't want to
+
+create so this is done now as soon as I
+
+probably go ahead and see this right and
+
+if I just go and see this particular
+
+command okay
+
+something like this I think the previous
+
+one I have already executed it so we'll
+
+go back again over here what is the last
+
+command that we executed yeah this is
+
+the command that we executed now here
+
+what I'm going to do finally I'm just
+
+going to paste this the next command and
+
+we are going to just click on run now
+
+once this run happens you can see it is
+
+now connected to GitHub and it is
+
+listening for jobs listening for jobs
+
+basically means any push that is
+
+basically happening now if I go ahead
+
+and probably see in the actions
+
+sorry in the settings if I go ahead and
+
+see whether there is any Runner created
+
+you can see that there is a self-hosted
+
+learner Runner created this is also
+
+called as a app Runner and this is in
+
+idle State the green signal state that
+
+basically means it is waiting for any
+
+commit to come if any commits are
+
+basically coming it will go ahead and
+
+push it into the ec2 instance right so
+
+this is uh the most important thing that
+
+we have done we have set up our
+
+self-hosted runner also step by step you
+
+need to focus on step by step what we
+
+did in the first we created Docker we
+
+created then our workflow file right
+
+then we went and created our ECR
+
+repository then we did all the necessary
+
+things that we required right we all
+
+before that we also created our IM repo
+
+IM user right then we went and created
+
+our ec2 instance and similarly we went
+
+ahead right now this is now in the idle
+
+State now the next step is that I will
+
+again go back to the settings
+
+and I need to add some secret keys right
+
+so if I go ahead and click on action I
+
+will go and add the secret key over here
+
+that is required right now I'll delete
+
+all these things because uh now my
+
+secret key will definitely change and
+
+this I just use this for the previous
+
+example okay so I will delete this okay
+
+so quickly quickly let's delete it
+
+okay
+
+everything and we need to add these five
+
+keys right what are five Keys first key
+
+is that AWS AWS
+
+excess
+
+key ID okay
+
+AWS access key ID what it will be
+
+present over here so if you probably
+
+open this CSV file which we download
+
+right so here you will be able to see
+
+that inside the CSV file
+
+okay if I expand this here you have AWS
+
+access key
+
+sorry AWS access key and AWS secret key
+
+right so I will go ahead and copy this
+
+and I will put it over here so this will
+
+be my first secret I will go ahead and
+
+add it okay now in my next one what I
+
+will do next see new secret key I will
+
+go and select my AWS secret access key
+
+so there will be another key value pair
+
+and again if I go over here so this is
+
+my another one okay
+
+and here I will be pasting it okay so
+
+this will be my AWS secret access key
+
+okay now two keys has been added the
+
+third key that I am basically going to
+
+create is AWS region okay step by step
+
+just name this particular key and key
+
+write it if you want to see in which
+
+instance we are running so if you go
+
+over here
+
+you are basically running in the North
+
+Virginia U.S east one okay so uh East
+
+one I'm just going to add this over here
+
+us Dash East dash one
+
+okay
+
+done I'm just going to create this
+
+secret now the next secret that I am
+
+going to basically create after this
+
+three has already been created that is
+
+AWS
+
+AWS ECR login URI and if you remember
+
+what is this ECR login URI this entire
+
+URL that we had actually kept or copied
+
+right so this is what we are basically
+
+going to do I will go and create my ad
+
+Secret
+
+Four Keys has been added now the fifth
+
+key is basically our app name which we
+
+specifically have in our Docker okay so
+
+here I will just go ahead and write ECR
+
+repository name okay and whatever is the
+
+ECR repository name that you
+
+specifically have in our case what is
+
+the ECR repository name so if you
+
+probably go and see in your uh GitHub
+
+right
+
+or over here you can see that I've used
+
+a name called as ml test okay so this is
+
+my ml test and that is what I am going
+
+to use over here okay
+
+ECR repository name so done these are
+
+the five important keys that we need to
+
+add one by one and once this is added
+
+the next is that we just do the
+
+deployment right so guys now just to
+
+test you know what I will do I will just
+
+update the readme file and see what I
+
+will do okay I will just update the
+
+readme file uh AWS deployment okay now
+
+see as soon as I commit this changes now
+
+what will happen see as soon as I commit
+
+this changes go to the action page okay
+
+and wait for some time okay so right now
+
+I have committed it okay so over here if
+
+you probably go and see my readme AWS
+
+deployment has happened
+
+um instead of read me also I can
+
+probably update any one of this file
+
+okay let's go ahead and
+
+make sure that edit this part or let's
+
+see in the GitHub action whether
+
+anything has happened right now still
+
+nothing has happened right now what I
+
+will do is that uh and let's see in my
+
+settings once whether my Runner is Idle
+
+or not it is idle
+
+so what I will do I will just make a
+
+small code change
+
+what code chain should I make
+
+I will just make a space
+
+I will just edit this and make a extra
+
+light okay I'm just simply adding
+
+something
+
+okay update app.py now see this action
+
+see as soon as a little bit change in my
+
+code event right now already this is
+
+basically now going to get
+
+started right and the first step is
+
+continuous integration now see in
+
+continuous integration what happened
+
+checkout code
+
+right the checkout code of is this
+
+happened in lint code it is basically
+
+just showing this lint repository but we
+
+can run unit use test cases which I will
+
+show you later on then you can see post
+
+checkout code and then completed the job
+
+this was with respect to unit
+
+integration right now with respect to
+
+continuous delivery you can see install
+
+utilities uh AWS CCR login tag there's
+
+this verifying everything from python
+
+3.78 everything copy command is
+
+basically happening all the packages are
+
+getting updated and this is how quickly
+
+things are happening now right and yeah
+
+everything is working fine I guess let's
+
+see after the deployment whether we'll
+
+be able to get an error okay then post
+
+login to Amazon CR then we also
+
+configure the AWS credential everything
+
+is automatically running I did not have
+
+to do much right over here see just one
+
+setup and this is how in the production
+
+gate deployment it will happen right if
+
+you know this step step by step just
+
+follow things right and automatically
+
+you will be able to understand things
+
+right
+
+so here it is
+
+so done done let's see it will take some
+
+time okay and we will wait till then
+
+till then what I will do I will just
+
+update all these things right Docker
+
+setup in ec2 commands to be executed
+
+okay I will just write like this okay
+
+and uh
+
+I will also give after this you know
+
+Docker setup in easy to execute it then
+
+I will also write after this what you
+
+need to do
+
+you need to configure ec2 as self-hosted
+
+learner okay
+
+configure easy to ask self-hosted Runner
+
+so I will just
+
+go ahead and I've already shown you this
+
+particular step so please make sure that
+
+you follow the video the next one will
+
+be setup GitHub Secrets right what all
+
+secrets you need to create you need to
+
+create all this Secrets right which I
+
+have already mentioned
+
+right so all these things we are going
+
+to update
+
+in our readme file till then okay and uh
+
+if we are updating readme file I think
+
+it will not trigger that okay so if you
+
+go to my repositories
+
+CI CD projects
+
+deployment is happening in the back end
+
+anyhow and this will be my readme
+
+and I will edit this
+
+and I'll paste it over here
+
+okay done
+
+so these are all the steps I will commit
+
+those changes so that you can refer it
+
+whenever you want so let's see how the
+
+deployment is going on login is also
+
+completed configure AWS considered a
+
+post login this this will happen and it
+
+will take time so we'll wait for some
+
+time till this things happens and once
+
+this thing happens we'll go ahead and
+
+test our entire application so guys we
+
+got an error over here in the build and
+
+tag and I understood what is the mistake
+
+that I specifically made so I'm just
+
+going to open my GitHub again okay and
+
+we'll do the setting of one of the
+
+things which I will again show you over
+
+here so I'll go to cicd project and
+
+let's go to the setting one inside the
+
+setting again you will be having the
+
+secret and variables will go and click
+
+this now with respect to the ECR
+
+repository name okay now this is super
+
+important and probably you really need
+
+to understand this because over here uh
+
+previously what I had given is that I
+
+had given the entire link okay
+
+but if I probably say with respect to
+
+this login URI and ECR repository name
+
+so I will just go and click this okay
+
+inside this right the repository name I
+
+have to probably give the student
+
+performance okay
+
+so this one was I had to give but I
+
+think I gave something else the entire
+
+link so I will update the secret the
+
+another secret the with which was with
+
+respect to the AWS ECR login URI now
+
+here also what I'm actually going to do
+
+is that update with only this much URL
+
+okay not with the entire URL over here
+
+so I will just go and copy this so
+
+finally I will update this particular
+
+Secret
+
+now uh what we can do again uh I will go
+
+to my action and uh let's rerun this
+
+workflow okay so I will just rerun this
+
+workflow and I'll just say that Rerun
+
+all the jobs okay no worries so I will
+
+just go ahead and rerun all the jobs and
+
+then we'll try to see now if it is
+
+working fine or not continuous
+
+integration will happen quickly but
+
+we'll say with respect to the continuous
+
+delivery which was failed last time okay
+
+so quickly let's see how much time it is
+
+going to probably take and we are going
+
+to basically do this entire continuous
+
+delivery and deployment with respect to
+
+that okay so just let's wait and let's
+
+this time I don't think so we will be
+
+getting this error okay now here only
+
+you could see right because of that
+
+right the matching was not happening it
+
+created the docker image but it was not
+
+able to push it into the decr repository
+
+then I understood that okay because of
+
+that the problem may be occurring so now
+
+the continuous delivery will be
+
+happening and now here you can see login
+
+and build it is happening so we'll wait
+
+for some time and see when whether the
+
+entire build will happen or not so let's
+
+just wait okay so finally guys you can
+
+see all the deployment has happened uh
+
+we were getting an error and this was
+
+the previous error that we get got and
+
+again because of the changes that we
+
+specifically did in the secret Keys we
+
+are able to fix it right so finally I
+
+have my update app.py over here
+
+ah now let's go and see whether
+
+everything is working fine in the
+
+continuous deployment I have completed
+
+the job the job has got completed now I
+
+will go to my ec2 instance so let's go
+
+to the ec2 instance I will just go and
+
+search for ec2 and we will go ahead and
+
+select our instance okay so our instance
+
+was one this is running the instance
+
+over here I will go inside this instance
+
+ID I will open this address okay now
+
+when I open this specific address
+
+initially you'll be able to see that
+
+I'll be getting this error okay but
+
+what do you have to do one more step
+
+which I probably missed to talk about
+
+you go to the security
+
+inside the security just go and see the
+
+security groups okay and just go and
+
+click on edit in one rules so here you
+
+need to add this last one okay last one
+
+so here you need to add custom TCP 8080
+
+because I had given a port of 8080 in my
+
+GitHub so if you probably go and see
+
+over here with the GitHub in the code in
+
+the app.py I have given 8080 okay so 88
+
+you can see the port number is given as
+
+8080 so that is the reason we need to
+
+mention it over here also in the ec2
+
+instance with respect to this 8080 okay
+
+and make sure that you select custom TCB
+
+and this needs to be selected right so
+
+that it can be used everywhere now what
+
+I am going to do I'm just going to use
+
+this port number 8080
+
+and just execute it
+
+so still uh I think there is an error
+
+let's see
+
+so let me go back
+
+over here
+
+and this will be my ec2
+
+instance
+
+this one I will copy this
+
+I will execute this and write 8080
+
+so now here you can basically see my
+
+home page is running and finally if I do
+
+slash predict
+
+data
+
+this is what I will be getting okay I
+
+can select mail groups and I think it
+
+will work
+
+and most of the end-to-end projects
+
+deployment is specifically done in this
+
+way by using the app Runner okay so
+
+please make sure that you follow the
+
+steps properly and finally you can see
+
+the prediction is 44.875 so this is
+
+working absolutely fine this is a
+
+deployment technique that we
+
+specifically use one was very important
+
+with respect to ECR why
+
+Dockers privately if you really want to
+
+put it Docker images if you want to put
+
+in AWS you have to use ECR repository
+
+and from there you want to pull and
+
+deploy it in the ec2 instance you have
+
+to probably use AWS ec2 instance itself
+
+and this will be super important because
+
+all the steps that we have done you can
+
+explain in the interview why you
+
+specifically went with this if you
+
+really want to scale up right further we
+
+can also add load balancer and through
+
+this way we can definitely do a lot of
+
+things with respect to so yes this was
+
+the video about deployment techniques I
+
+hope you like this if you like it please
+
+do make sure that you hit like button
+
+and as we go ahead you know I'll also be
+
+discussing about uh various ways uh
+
+we'll also be discussing about GitHub
+
+actions with the Azure and many more
+
+right but after you do this the next
+
+thing that you probably need to do is
+
+that just uh close this ec2 instance or
+
+you can go to GitHub action also and
+
+whatever is your app Runner right you
+
+can delete it or make it uh in the idle
+
+State remove Runner I will just remove
+
+it because I don't want to this so I'll
+
+force remove this Runner and then I will
+
+also make sure that my ec2 instance
+
+I will just try to close this up so when
+
+I go to my ec2 instance I will also try
+
+to stop it because I don't want this
+
+okay so action
+
+or instance State I will just say
+
+terminate instance so that I don't want
+
+any charges to happen more okay this is
+
+done and similarly with respect to ECR
+
+also what I will do I will go and select
+
+the ECR repositories and I'll try to
+
+delete that repository not required
+
+because I just wanted to test it so I
+
+will go ahead and delete it so here I
+
+will just write delete
+
+so and none of the charges happens and I
+
+guess you have also seen my secret
+
+access key and everything as such so I'm
+
+also going to go to my IM user and uh I
+
+will just delete my user group okay I'll
+
+just delete my user so that you don't
+
+check okay what I'm actually doing okay
+
+so users uh here I have question I can
+
+we will go ahead and delete this
+
+to confirm release a user name okay
+
+done so that none of the additional
+
+charges will happen so yes this was it
+
+for my side I hope you liked this
+
+particular video I will see you all in
+
+the next video thank you take care have
+
+a great day
+
+
