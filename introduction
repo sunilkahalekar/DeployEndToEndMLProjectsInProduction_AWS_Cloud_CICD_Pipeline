@@ -1,380 +1,85 @@
-hello all my name is krishnaika and
+end-to-end Project Playlist machine learning project playlist with deployment.
 
-welcome to my YouTube channel so guys I
+we saw two different deployment techniques. One was with the help of AWS Beanstalk and the other one was in the Azure Cloud.
 
-hope you have learned a lot from my
+but now in this particular video I will be focusing on
 
-end-to-end Project Playlist machine
+uh you know creating a production grade deployment technique using AWS where I will specifically use ECR and ec2 instance.
 
-learning project playlist with
+I will talk about what exactly is ECR and ec2 instance.
 
-deployment till now I have actually
 
-created 10 tutorials and I could see
+let's go ahead and do this particular deployment uh and this deployment can for you can basically also use it for both machine learning and deep learning project it is up to you okay
 
-many people are creating amazing
+first of all I have my project over here the entire project created now
 
-projects by using cicd pipelines in our
+additionally what I need to do is that I need to create this Docker file okay so Docker file I need to create over here
 
-previous video we saw two different
+and this Docker file will play a very important role why Docker is required because uh like with the help of Docker you'll be able to correct create
 
-deployment techniques one was with the
+containers with irrespective of the OS that is specifically being used in the server.
 
-help of AWS Beanstalk and the other one
 
-was in the Azure Cloud but now in this
 
-particular video I will be focusing on
+we are going to do first of all we are going to include this Docker file my entire project was built in 3.8 so I'm going to just mention 3.8
 
-uh you know creating a production grade
+over here but step by step if you really need to understand what exactly we are doing I'm I'm basically saying that take a base image of python 3.8 slim Buster so whatever happen is that from the
 
-deployment technique using AWS where I
+docker Hub it will bring up this python 3.8 version of Linux machine I'll not say Linux machine Linux base image so that it can be taken and can be done
 
-will specifically use ECR and ec2
+with respect to the deployment. It will not take machine okay it will be taking a base image of a Linux environment and we are creating a working directory
 
-instance I will talk about what exactly
+called as app okay then uh the next step is basically copying this entire project into this app folder. The entire project into this app folder over here
 
-is ECR and ec2 instance but I had
+and then the next step is a run command where we are updating all the packages after probably uh doing before doing the deployment in that specific server it
 
-already announced guys that before
+can be a Linux machine okay and we will definitely use a Ubuntu machine over there and then we will go ahead and do the installment of the entire
 
-attending this lesson right I had
+requirement.txt so once that install emission takes place this is the command that is used to run the file that is app.py python3 app.py just specifying
 
-actually created a complete one hour 20
+that we are working in Python 3 version 3.8 version and then the app.py is basically my file name which it will be running.
 
-minutes video on Dockers so if you know
 
-this trust me this will be super easy
+it is the same project that we have actually done student performance indicator right that same project see this guys if you probably see over here
 
-for you to understand this particular
+this is my model training this is my student performance indicator everything is same now additionally what I am doing in this video is that I am going ahead
 
-video at the end of the day please make
+and creating a Docker file okay now with respect to this particular Docker file once we do it we just need to check whether we are able to build this Docker
 
-sure that you revise this Docker I had
+file or not okay and again in order to show you like how the build basically happens and all I will just go ahead and delete this and probably create a
 
-also announced that in my community post
+command prompt okay so if you probably see over here right Docker images if I go just go and see Docker images so I think the docker is not open so for this
 
-Because unless and until you don't
+you required a Docker desktop.
 
-understand with respect to Docker you
 
-will not be able to understand this
+start this Docker and then only we'll be able to create the docker image because I just need to check whether my Docker
 
-deployment right and this was the entire
+image is being able to create or not okay so that all things will try to see see at the end of the day we will be
 
-playlist please go ahead share with all
+seeing you can see this video only like how to build a Docker how to install the docker how to create a Docker image
 
-your friends and see to it okay now
+everything you know everything is basically mentioned over here Docker image to push Docker image to Docker Hub you know build how to build it
 
-let's go ahead and do this particular
+everything is done over here
 
-deployment uh and this deployment can
 
-for you can basically also use it for
+ over here is that so here is my Docker desktop it has been enabled if I probably see in the images you can see over here I have
 
-both machine learning and deep learning
+created this Krishna x06 performance uh student performance already right and this is the docker that we have specifically created now if I go and see
 
-project it is up to you okay
+if I just clear the screen I know guys little this is little bit difficult but you really need to see this okay now here if I probably go ahead and Docker
 
-so let's go ahead and let's quickly do
+images so here you'll be able to see I have already created this particular images
 
-this uh first of all I have my project
+right so this is building correctly everything is happening correctly I don't want to show you the steps
 
-over here the entire project created now
+otherwise it will just be a repeated step so that is the reason I'm telling
 
-additionally what I need to do is that I
 
-need to create this Docker file okay so
+ I've created a new repository called the AWS cicd project and here you will be able to see
 
-Docker file I need to create over here
-
-and this Docker file will play a very
-
-important role why Docker is required
-
-because uh like with the help of Docker
-
-you'll be able to correct create
-
-containers with irrespective of the OS
-
-that is specifically being used in the
-
-server you know and uh you know I've
-
-actually created a detailed video that
-
-only I said right I have created a
-
-detailed video about Dockers over here
-
-made you understand everything if you
-
-are able to understand till here trust
-
-me it will be very easy so in this video
-
-over here what we are going to do first
-
-of all we are going to include this
-
-Docker file my entire project was built
-
-in 3.8 so I'm going to just mention 3.8
-
-over here but step by step if you really
-
-need to understand what exactly we are
-
-doing I'm I'm basically saying that take
-
-a base image of python 3.8 slim Buster
-
-so whatever happen is that from the
-
-docker Hub it will bring up this python
-
-3.8 version of Linux machine I'll not
-
-say Linux machine Linux base image so
-
-that it can be taken and can be done
-
-with respect to the deployment it will
-
-not take machine okay it will be taking
-
-a base image of a Linux environment and
-
-uh we are creating a working directory
-
-called as app okay then uh the next step
-
-is basically copying this entire project
-
-into this app folder okay the entire
-
-project into this app folder over here
-
-and then the next step is a run command
-
-where we are updating all the packages
-
-after probably uh doing before doing the
-
-deployment in that specific server it
-
-can be a Linux machine okay and we will
-
-definitely use a Ubuntu machine over
-
-there and then we will go ahead and do
-
-the installment of the entire
-
-requirement.txt so once that install
-
-emission takes place this is the command
-
-that is used to run the file that is
-
-app.py python3 app.py just specifying
-
-that we are working in Python 3 version
-
-3.8 version and then the app.py is
-
-basically my file name which it will be
-
-running it is the same project that we
-
-have actually done student performance
-
-indicator right that same project see
-
-this guys if you probably see over here
-
-this is my model training this is my
-
-student performance indicator everything
-
-is same now additionally what I am doing
-
-in this video is that I am going ahead
-
-and creating a Docker file okay now with
-
-respect to this particular Docker file
-
-once we do it we just need to check
-
-whether we are able to build this Docker
-
-file or not okay and again in order to
-
-show you like how the build basically
-
-happens and all I will just go ahead and
-
-delete this and probably create a
-
-command prompt okay so if you probably
-
-see over here right Docker images if I
-
-go just go and see Docker images so I
-
-think the docker is not open so for this
-
-you required a Docker desktop now what
-
-exactly Docker is I've created a
-
-dedicated video in that particular video
-
-itself the one hour video we need to
-
-start this Docker and then only we'll be
-
-able to create the docker image because
-
-I just need to check whether my Docker
-
-image is being able to create or not
-
-okay so that all things will try to see
-
-see at the end of the day we will be
-
-seeing you can see this video only like
-
-how to build a Docker how to install the
-
-docker how to create a Docker image
-
-everything you know everything is
-
-basically mentioned over here Docker
-
-image to push Docker image to Docker Hub
-
-you know build how to build it
-
-everything is done over here in this
-
-particular video guys and uh you can
-
-probably see that with respect to
-
-command with respect to everything we
-
-have executed over here and I have
-
-explained in a detailed manner so my
-
-suggestion would be that please go
-
-through this it is super super important
-
-if you know this how to do it trust me
-
-it will be very much easy for you know
-
-able to understand a Docker okay so ah
-
-like if I really want to build a Docker
-
-I can probably build a Docker by using
-
-some commands which I will show you
-
-right now but you just see this video
-
-okay
-
-this video is very very much important
-
-with respect to the implementation see
-
-in this I am pushing this particular uh
-
-images to the docker Hub itself right so
-
-all those things are basically happening
-
-and it has been explained in above
-
-perfect way okay
-
-now what I'm going to do over here is
-
-that so here is my Docker desktop okay
-
-it has been enabled if I probably see in
-
-the images you can see over here I have
-
-created this Krishna x06 performance uh
-
-student performance already right and
-
-this is the docker that we have
-
-specifically created now if I go and see
-
-if I just clear the screen I know guys
-
-little this is little bit difficult but
-
-you really need to see this okay now
-
-here if I probably go ahead and Docker
-
-images
-
-so here you'll be able to see I have
-
-already created this particular images
-
-right so this is building correctly
-
-everything is happening correctly I
-
-don't want to show you the steps
-
-otherwise it will just be a repeated
-
-step so that is the reason I'm telling
-
-you to go through this particular video
-
-okay this video will be put up in the
-
-pinned comment okay now what we are
-
-going to do after we create this the
-
-validating is happening the building is
-
-happening with respect to my Docker now
-
-the next step what I will do I will push
-
-this entire content into the GitHub and
-
-then once I put into the GitHub then we
-
-will go ahead with the deployment so
-
-here we probably see this I've created a
-
-new repository called the AWS cicd
-
-project and here you will be able to see
-
-my entire deployment the commit that I
-
-have actually done with respect to the
+my entire deployment the commit that I have actually done with respect to the
 
 code okay
 
