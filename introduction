@@ -83,265 +83,91 @@ my entire deployment the commit that I have actually done with respect to the
 
 code okay
 
-now before this commit you really also
+now before this commit you really also need to understand one workflow that we have specifically created so here is the
 
-need to understand one workflow that we
+main.yaml file now please observe this workflow because of this workflow only the entire deployment will happen and
 
-have specifically created so here is the
+this workflow has both CI CD pipeline integrated okay observe this workflow the name of this particular workflow is
 
-main.yaml file now please observe this
+workflow only whenever any push is happening on the main branch right the readme.md file is ignored remaining all
 
-workflow because of this workflow only
+will be pushed into our deployment first of all the job that is going to happen we will divide this first is integration
 
-the entire deployment will happen and
+then we push it into the ECR image and then we have continuous deployment this three steps are important right with
 
-this workflow has both CI CD pipeline
+respect to our deployment when we say integration in integration this is nothing but continuous integration in
 
-integrated okay observe this workflow
+this integration what we specifically do it is saying that you need to run on the Ubuntu latest machine and here it is
 
-the name of this particular workflow is
+will check out the code and it I've just printed some linting repository like Eco code is there some printing is happening
 
-workflow only whenever any push is
+so what all things you can basically do in this integration section you can run all the unit test cases to just see that
 
-happening on the main branch right the
+if everything is running properly or not right so here we have just printed some Eco command this Eco command is
 
-readme.md file is ignored remaining all
+basically used in Linux machine but along with this if you really want to run any simple operation of testing all
 
-will be pushed into our deployment first
+the unit test cases you can probably do this okay I will later on in my project I will create some unit test cases and
 
-of all the job that is going to happen
+we will try to run it in the integration environment like in the continuous integration section okay so this is my
 
-we will divide this first is integration
+first task with respect to the job okay so integration after integration what will happen after continuous integration
 
-then we push it into the ECR image and
+we need to build build and push ECR image now what is ECR image Now understand one thing guys when we create
 
-then we have continuous deployment this
+a Docker okay by default Docker when we take that Docker image and push it into the docker hub then from that Docker Hub
 
-three steps are important right with
+everybody will be publicly able to access right this particular Docker file now if I probably show you my Docker Hub
 
-respect to our deployment when we say
 
-integration in integration this is
 
-nothing but continuous integration in
+I will log in and show you see I had actually created one Docker Hub Docker Hub is just like you have all the docker
 
-this integration what we specifically do
+images whoever wants to put put it over here right so based on that like let's say if you have created a Docker image
 
-it is saying that you need to run on the
+you want people to use it you can put it into a Docker Hub and this will be publicly available so similarly here you
 
-Ubuntu latest machine and here it is
+can see that I've put this student performance app over here in the docker Hub so that people can be able to access
 
-will check out the code and it I've just
+it but when you are working for the companies right when you're working for the companies this particular app this
 
-printed some linting repository like Eco
+particular Docker image will be private okay and in order to put the private Docker image where do you put in AWS in
 
-code is there some printing is happening
+AWS you specifically put that in the ECR repository right so AWS ECR if I probably just go and search for AWS ECR
 
-so what all things you can basically do
+see what exactly is AWS CCR AWS ECR is for build deploy and manages uh on AWS if I see ECR see it is fully managed
 
-in this integration section you can run
+Docker container to store manage and deploy images so whatever image is basically created
 
-all the unit test cases to just see that
+over here I will put a in the ECR repository and from there the deployment will be done to the ec2 instance this is
 
-if everything is running properly or not
+how all the entire steps will go ahead you know so ECR is basically used to store private Docker images so those
 
-right so here we have just printed some
+Docker images will not be publicly available you can still read about this more over here push container images to
 
-Eco command this Eco command is
+ECR without installing or scaling infrastructure and pull images using any management tool from this ECR we can
 
-basically used in Linux machine but
+probably do the deployment in various instances like you can go ahead and do the deployment in ec2 instance and all
 
-along with this if you really want to
+and all and all okay it says it has more functionality see access and distribute your image faster reduce download times
 
-run any simple operation of testing all
+and improve ability using a scalable durable architecture when I was in my previous working in my previous project
 
-the unit test cases you can probably do
+there also in in Panasonic I was specifically using this AWS ECR and awcc2 instance for doing any kind of
 
-this okay I will later on in my project
+deployment. now let's go ahead and let's see uh what is the next step after pushing it into
 
-I will create some unit test cases and
+the easier in the ECR again first of all you need to understand this command it needs integration that basically means
 
-we will try to run it in the integration
+unless and until integration part is not successful we will not go ahead and push push the entire Docker image into the
 
-environment like in the continuous
+NCR repository and this is the part of continuous delivery it will also run on Ubuntu latest it will check out the code from the GitHub
 
-integration section okay so this is my
+it will install all the necessary libraries that is required to update the packages then it will configure the AWS credentials whatever credential is now
 
-first task with respect to the job okay
+you may be thinking Krish how do we come to this particular credential I will discuss about it don't worry okay everything will be discussed with
 
-so integration after integration what
-
-will happen after continuous integration
-
-we need to build build and push ECR
-
-image now what is ECR image Now
-
-understand one thing guys when we create
-
-a Docker okay by default Docker when we
-
-take that Docker image and push it into
-
-the docker hub then from that Docker Hub
-
-everybody will be publicly able to
-
-access right this particular Docker file
-
-now if I probably show you my Docker Hub
-
-okay
-
-I will log in and show you see I had
-
-actually created one Docker Hub Docker
-
-Hub is just like you have all the docker
-
-images whoever wants to put put it over
-
-here right so based on that like let's
-
-say if you have created a Docker image
-
-you want people to use it you can put it
-
-into a Docker Hub and this will be
-
-publicly available so similarly here you
-
-can see that I've put this student
-
-performance app over here in the docker
-
-Hub so that people can be able to access
-
-it but when you are working for the
-
-companies right when you're working for
-
-the companies this particular app this
-
-particular Docker image will be private
-
-okay and in order to put the private
-
-Docker image where do you put in AWS in
-
-AWS you specifically put that in the ECR
-
-repository right so AWS ECR if I
-
-probably just go and search for AWS ECR
-
-see what exactly is AWS CCR AWS ECR is
-
-for build deploy and manages uh on AWS
-
-if I see ECR see it is fully managed
-
-Docker container to store manage and
-
-deploy images
-
-so whatever image is basically created
-
-over here I will put a in the ECR
-
-repository and from there the deployment
-
-will be done to the ec2 instance this is
-
-how all the entire steps will go ahead
-
-you know so ECR is basically used to
-
-store private Docker images so those
-
-Docker images will not be publicly
-
-available you can still read about this
-
-more over here push container images to
-
-ECR without installing or scaling
-
-infrastructure and pull images using any
-
-management tool from this ECR we can
-
-probably do the deployment in various
-
-instances like you can go ahead and do
-
-the deployment in ec2 instance and all
-
-and all and all okay it says it has more
-
-functionality see access and distribute
-
-your image faster reduce download times
-
-and improve ability using a scalable
-
-durable architecture when I was in my
-
-previous working in my previous project
-
-there also in in Panasonic I was
-
-specifically using this AWS ECR and
-
-awcc2 instance for doing any kind of
-
-deployment okay
-
-now let's go ahead and let's see uh what
-
-is the next step after pushing it into
-
-the easier in the ECR again first of all
-
-you need to understand this command it
-
-needs integration that basically means
-
-unless and until integration part is not
-
-successful we will not go ahead and push
-
-push the entire Docker image into the
-
-NCR repository and this is the part of
-
-continuous delivery
-
-it will also run on Ubuntu latest it
-
-will check out the code from the GitHub
-
-it will install all the necessary
-
-libraries that is required to update the
-
-packages then it will configure the AWS
-
-credentials whatever credential is now
-
-you may be thinking Krish how do we come
-
-to this particular credential I will
-
-discuss about it don't worry okay
-
-everything will be discussed with
-
-respect to the credentials everything as
-
-such okay then I have this access key
-
-AWS access key ID AWS secret access key
+respect to the credentials everything as such okay then I have this access key AWS access key ID AWS secret access key
 
 this all are basically coming from the
 
